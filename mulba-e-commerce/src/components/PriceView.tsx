@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import PriceFormatter from "./PriceFormatter";
 
 interface PriceViewProps {
   price: number | undefined;
@@ -22,22 +23,4 @@ const PriceView = ({ price, discount, className }: PriceViewProps) => {
   );
 };
 
-interface PriceFormatterProps {
-  amount: number | undefined;
-  className?: string;
-}
-
-const PriceFormatter = ({ amount, className }: PriceFormatterProps) => {
-  const formattedPrice = new Number(amount).toLocaleString("en-US", {
-    currency: "USD",
-    style: "currency",
-    minimumFractionDigits: 2,
-  });
-
-  return (
-    <span className={(cn("text-sm text-black"), className)}>
-      {formattedPrice}
-    </span>
-  );
-};
 export default PriceView;

@@ -5,6 +5,7 @@ import Image from "next/image";
 import { urlFor } from "@/sanity/lib/image";
 import { Card, CardContent, CardDescription, CardHeader } from "./ui/card";
 import PriceView from "./PriceView";
+import AddToCardButton from "./AddToCardButton";
 
 const ProductCard = ({ product }: { product: Products }) => {
   return (
@@ -14,7 +15,7 @@ const ProductCard = ({ product }: { product: Products }) => {
           <CardContent className="">
             <CardHeader>
               {product?.images && (
-                <Link href={`/product/${product._id}`}>
+                <Link href={`/product/${product?.slug?.current}`}>
                   <div className="relative h-60 w-full overflow-hidden rounded-xl">
                     <Image
                       src={urlFor(product.images[0]).url()}
@@ -34,6 +35,7 @@ const ProductCard = ({ product }: { product: Products }) => {
                 discount={product?.discount}
               />
             </CardDescription>
+            <AddToCardButton product={product} />
           </CardContent>
         </Card>
       </section>
