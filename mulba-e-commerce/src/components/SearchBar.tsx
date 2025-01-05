@@ -10,7 +10,6 @@ import {
   DialogTrigger,
 } from "./ui/dialog";
 import { Input } from "./ui/input";
-import { set } from "sanity";
 import { client } from "@/sanity/lib/client";
 import { Products } from "../../sanity.types";
 import Image from "next/image";

@@ -4,6 +4,7 @@ import "../globals.css";
 import Navbar from "@/layouts/Navbar";
 import Footer from "@/layouts/Footer";
 import { ClerkProvider } from "@clerk/nextjs";
+import { Toaster } from "react-hot-toast";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,6 +35,16 @@ export default function RootLayout({
           <Navbar />
           <main className="flex-1">{children}</main>
           <Footer />
+          <Toaster
+            position="bottom-right"
+            reverseOrder={false}
+            toastOptions={{
+              style: {
+                background: "black",
+                color: "white",
+              },
+            }}
+          />
         </body>
       </html>
     </ClerkProvider>

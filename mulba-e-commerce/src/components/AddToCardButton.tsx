@@ -1,8 +1,12 @@
+"use client";
+
 import { cn } from "@/lib/utils";
 import { Products } from "../../sanity.types";
 import { Button } from "./ui/button";
 import PriceFormatter from "./PriceFormatter";
 import QuantityButton from "./QuantityButton";
+import useCartStore from "@/productsStore";
+import { toast } from "react-hot-toast";
 
 interface AddToCardButtonProps {
   product: Products;
@@ -10,7 +14,17 @@ interface AddToCardButtonProps {
 }
 const AddToCardButton = ({ product, className }: AddToCardButtonProps) => {
   const isoutOfStock = product?.stock === 0;
-  const itemCount = 0;
+  const { addItem, getItemCount } = useCartStore();
+  const itemCount = getItemCount(product?._id);
+  // console.log(itemCount);
+
+  const addToCart = () => {
+    addItem(product);
+    toast.success(
+      `${product?.name?.substring(0, 12)} added to cart successfully`
+    );
+  };
+
   return (
     <>
       <div className="w-full ">
@@ -28,7 +42,11 @@ const AddToCardButton = ({ product, className }: AddToCardButtonProps) => {
             </div>
           </div>
         ) : (
-          <Button disabled={isoutOfStock} className={(cn("w-full"), className)}>
+          <Button
+            disabled={isoutOfStock}
+            onClick={addToCart}
+            className={(cn("w-full"), className)}
+          >
             Add To Cart
           </Button>
         )}

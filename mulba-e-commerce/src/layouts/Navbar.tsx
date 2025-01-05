@@ -13,7 +13,7 @@ const Navbar = async () => {
 
   return (
     <>
-      <nav className="flex justify-between items-center py-4 lg:px-20 md:px-8 px-4 border-b">
+      <nav className="flex justify-between items-center py-4 lg:px-20 md:px-8 px-4 border-b sticky top-0 w-full bg-white z-50">
         <div className="flex gap-3 items-center">
           <MobileNavbar />
           <h2 className="md:text-2xl text-xl font-semibold">Mulba</h2>
