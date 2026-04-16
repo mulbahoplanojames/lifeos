@@ -1,8 +1,10 @@
 import {
   BookDashedIcon,
   CheckCheck,
+  HeartCrack,
   MessageCircleCheckIcon,
   PlaneLandingIcon,
+  Settings,
   ShoppingBag,
 } from "lucide-react";
 import { NavLink } from "react-router";
@@ -19,10 +21,11 @@ const navLinks = [
     icon: CheckCheck,
   },
   {
-    title: "Chat",
-    href: "/chat",
-    icon: MessageCircleCheckIcon,
+    title: "Settings",
+    href: "/settings",
+    icon: Settings,
   },
+
   {
     title: "Travel Planner",
     href: "/travel-planner",
@@ -34,16 +37,14 @@ const navLinks = [
     icon: ShoppingBag,
   },
   {
-    title: "Settings",
-    href: "/settings",
-    icon: ({ className }: { className?: string }) => (
-      <span
-        className={`material-symbols-outlined ${className}`}
-        data-icon="settings"
-      >
-        settings
-      </span>
-    ),
+    title: "Medical",
+    href: "/medical",
+    icon: HeartCrack,
+  },
+  {
+    title: "Chat",
+    href: "/chat",
+    icon: MessageCircleCheckIcon,
   },
 ];
 

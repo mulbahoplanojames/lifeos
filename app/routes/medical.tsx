@@ -1,0 +1,26 @@
+import { Link } from "react-router";
+import type { Route } from "./+types/medical";
+
+export function meta({}: Route.MetaArgs) {
+  return [
+    { title: "Dashboard" },
+    { name: "description", content: "Welcome to LifeOS" },
+  ];
+}
+
+export default function Medical() {
+  return (
+    <>
+      <h1 className="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-6">
+        Medical
+      </h1>
+
+      <Link
+        to="/medical/new-medical"
+        className="bg-surface-container-high border-2 w-40 justify-center border-primary cursor-pointer text-on-surface px-6 py-3 rounded-xl font-semibold flex items-center gap-2 hover:bg-surface-container-highest transition-colors"
+      >
+        Add Medical
+      </Link>
+    </>
+  );
+}
