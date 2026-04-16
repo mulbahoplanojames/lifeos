@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import type { Route } from "./+types/travel-planner";
+import type { Route } from "./+types/chat";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -8,18 +8,18 @@ export function meta({}: Route.MetaArgs) {
   ];
 }
 
-export default function TravelPlanner() {
+export default function Chat() {
   return (
     <>
       <h1 className="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-6">
-        Travel Planner
+        Chat
       </h1>
 
       <Link
-        to="/travel-planner/new-travel-planner"
+        to="/chat/new-chat"
         className="bg-surface-container-high border-2 w-40 justify-center border-primary cursor-pointer text-on-surface px-6 py-3 rounded-xl font-semibold flex items-center gap-2 hover:bg-surface-container-highest transition-colors"
       >
-        Add Travel
+        Add Chat
       </Link>
     </>
   );

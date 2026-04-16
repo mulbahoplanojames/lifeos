@@ -1,4 +1,5 @@
-import type { Route } from "./+types/home";
+import { Link } from "react-router";
+import type { Route } from "./+types/tasks";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -10,7 +11,16 @@ export function meta({}: Route.MetaArgs) {
 export default function Task() {
   return (
     <>
-      <h1>Tasks</h1>
+      <h1 className="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-6">
+        Tasks
+      </h1>
+
+      <Link
+        to="/tasks/new-task"
+        className="bg-surface-container-high border-2 w-32 border-primary cursor-pointer text-on-surface px-6 py-3 rounded-xl font-semibold flex items-center gap-2 hover:bg-surface-container-highest transition-colors"
+      >
+        Add task
+      </Link>
     </>
   );
 }

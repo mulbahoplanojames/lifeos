@@ -1,3 +1,4 @@
+import QuickActions from "../../components/home/quick-action";
 import type { Route } from "./+types/home";
 
 export function meta({}: Route.MetaArgs) {
@@ -24,22 +25,7 @@ export default function Home() {
           </p>
         </header>
         {/* <!-- Quick Actions --> */}
-        <div className="flex gap-4 mb-12">
-          <button className="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-3 rounded-xl font-semibold flex items-center gap-2 shadow-lg shadow-primary/20 hover:scale-[0.98] transition-transform">
-            <span className="material-symbols-outlined text-xl">add</span>
-            Add Task
-          </button>
-          <button className="bg-surface-container-high text-on-surface px-6 py-3 rounded-xl font-semibold flex items-center gap-2 hover:bg-surface-container-highest transition-colors">
-            <span className="material-symbols-outlined text-xl">
-              chat_bubble
-            </span>
-            Start Chat
-          </button>
-          <button className="bg-surface-container-high text-on-surface px-6 py-3 rounded-xl font-semibold flex items-center gap-2 hover:bg-surface-container-highest transition-colors">
-            <span className="material-symbols-outlined text-xl">explore</span>
-            Create Trip
-          </button>
-        </div>
+        <QuickActions />
         {/* <!-- Summary Stat Cards --> */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           <div className="bg-surface-container-lowest p-6 rounded-xl shadow-sm border border-outline-variant/10">
