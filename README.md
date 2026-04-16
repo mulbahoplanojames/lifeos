@@ -1,87 +1,110 @@
-# Welcome to React Router!
+# LifeOS 🚀
 
-A modern, production-ready template for building full-stack React applications using React Router.
+A comprehensive personal management system built with React Router, TypeScript, and Tailwind CSS. LifeOS is designed to streamline daily tasks, medical tracking, travel planning, and shopping in one unified dashboard.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+## 🏗 Project Structure
 
-## Features
+The project follows a feature-based organizational structure to ensure scalability and maintainability.
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
-
-## Getting Started
-
-### Installation
-
-Install the dependencies:
-
-```bash
-npm install
+```text
+├── app/
+│   ├── routes/              # Page routes and navigation logic
+│   ├── root.tsx             # Main application entry point
+│   └── app.css              # Global styles and Tailwind imports
+├── components/              # Reusable UI components
+│   ├── home/                # Dashboard-specific components
+│   ├── store/               # Shopping & inventory components
+│   ├── tasks/               # Task management components
+│   └── travel/              # Travel planning components
+├── layout/                  # Shared layouts (Sidebar, Navigation)
+├── data/                    # Static data and mock stores
+├── types/                   # TypeScript interfaces and types
+├── public/                  # Static assets (images, icons)
+└── react-router.config.ts   # Framework configuration
 ```
-
-### Development
-
-Start the development server with HMR:
-
-```bash
-npm run dev
-```
-
-Your application will be available at `http://localhost:5173`.
-
-## Building for Production
-
-Create a production build:
-
-```bash
-npm run build
-```
-
-## Deployment
-
-### Docker Deployment
-
-To build and run using Docker:
-
-```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
 
 ---
 
-Built with ❤️ using React Router.
+## 🛠 Feature Access Guide
+
+To help team members focus on specific modules, here is the breakdown of files related to each feature.
+
+### ✅ Task Management Feature
+
+If you are working on the **Task Feature**, these are your primary files:
+
+- **Routes:**
+  - `app/routes/tasks.tsx` - Main tasks list view.
+  - `app/routes/new-task.tsx` - Form for creating new tasks.
+- **Components:**
+  - `components/tasks/` - UI components specific to task rendering.
+- **Data & Types:**
+  - `data/tasks/` - Mock data or local storage logic for tasks.
+  - `types/tasks/` - TypeScript definitions for Task objects.
+
+---
+
+### 🏥 Medical & Health Feature
+
+Files related to health tracking and medical records:
+
+- **Routes:**
+  - `app/routes/medical.tsx` - Health dashboard.
+  - `app/routes/new-medical.tsx` - Entry form for medical records.
+
+---
+
+### 🛒 Store & Shopping Feature
+
+Files related to inventory and shopping lists:
+
+- **Routes:**
+  - `app/routes/store.tsx` - Store inventory view.
+  - `app/routes/new-store.tsx` - Add new items to store.
+- **Components:**
+  - `components/store/` - Component library for the store module.
+
+---
+
+### ✈️ Travel Planner Feature
+
+Files related to trip planning and itineraries:
+
+- **Routes:**
+  - `app/routes/travel-planner.tsx` - Overview of planned trips.
+  - `app/routes/new-travel-planner.tsx` - Create new trip plans.
+- **Components:**
+  - `components/travel/` - UI elements for maps and itineraries.
+
+---
+
+### ⚙️ System & Settings
+
+Global components and configuration:
+
+- **Settings:** `app/routes/settings.tsx`
+- **Navigation:** `layout/sidebar.tsx`
+- **Dashboard Home:** `app/routes/home.tsx` & `components/home/`
+
+---
+
+## 🚀 Getting Started
+
+1. **Install Dependencies:**
+
+   ```bash
+   pnpm install
+   ```
+
+2. **Run Development Server:**
+
+   ```bash
+   pnpm dev
+   ```
+
+3. **Build for Production:**
+   ```bash
+   pnpm build
+   ```
+
+Built with ❤️ for personal productivity.
