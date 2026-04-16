@@ -1,11 +1,13 @@
 import {
   BookDashedIcon,
+  CalendarIcon,
   CheckCheck,
   HeartCrack,
   MessageCircleCheckIcon,
   PlaneLandingIcon,
   Settings,
   ShoppingBag,
+  WalletIcon,
 } from "lucide-react";
 import { NavLink } from "react-router";
 
@@ -21,12 +23,6 @@ const navLinks = [
     icon: CheckCheck,
   },
   {
-    title: "Settings",
-    href: "/settings",
-    icon: Settings,
-  },
-
-  {
     title: "Travel Planner",
     href: "/travel-planner",
     icon: PlaneLandingIcon,
@@ -37,6 +33,16 @@ const navLinks = [
     icon: ShoppingBag,
   },
   {
+    title: "Expense",
+    href: "/expense",
+    icon: WalletIcon,
+  },
+  {
+    title: "Calendar Task",
+    href: "/calendar-task",
+    icon: CalendarIcon,
+  },
+  {
     title: "Medical",
     href: "/medical",
     icon: HeartCrack,
@@ -45,6 +51,11 @@ const navLinks = [
     title: "Chat",
     href: "/chat",
     icon: MessageCircleCheckIcon,
+  },
+  {
+    title: "Settings",
+    href: "/settings",
+    icon: Settings,
   },
 ];
 
