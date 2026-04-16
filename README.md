@@ -51,6 +51,11 @@ Files related to health tracking and medical records:
 - **Routes:**
   - `app/routes/medical.tsx` - Health dashboard.
   - `app/routes/new-medical.tsx` - Entry form for medical records.
+  - **Components:**
+  - `components/medical/` - UI components specific to medical rendering.
+- **Data & Types:**
+  - `data/medical/` - Mock data or local storage logic for medical.
+  - `types/medical/` - TypeScript definitions for medical objects.
 
 ---
 
@@ -63,6 +68,9 @@ Files related to inventory and shopping lists:
   - `app/routes/new-store.tsx` - Add new items to store.
 - **Components:**
   - `components/store/` - Component library for the store module.
+  - **Data & Types:**
+  - `data/store/` - Mock data or local storage logic for store.
+  - `types/store/` - TypeScript definitions for store objects.
 
 ---
 
@@ -75,6 +83,9 @@ Files related to trip planning and itineraries:
   - `app/routes/new-travel-planner.tsx` - Create new trip plans.
 - **Components:**
   - `components/travel/` - UI elements for maps and itineraries.
+  - **Data & Types:**
+  - `data/travel/` - Mock data or local storage logic for travel.
+  - `types/travel/` - TypeScript definitions for travel objects.
 
 ---
 
