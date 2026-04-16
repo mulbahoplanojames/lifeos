@@ -28,4 +28,12 @@ export default [
     index("./routes/medical.tsx"),
     route("new-medical", "./routes/new-medical.tsx"),
   ]),
+  ...prefix("expense", [
+    index("./routes/expense.tsx"),
+    route("new-expense", "./routes/new-expense.tsx"),
+  ]),
+  ...prefix("calendar-task", [
+    index("./routes/calendar-task.tsx"),
+    route("new-calendar-task", "./routes/new-calendar-task.tsx"),
+  ]),
 ] satisfies RouteConfig;
